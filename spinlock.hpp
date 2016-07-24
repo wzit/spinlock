@@ -113,15 +113,12 @@ namespace dsa
             )
         };
 
-        std::atomic_flag lock_flag;
+        /* guaranteed initialization to false */
+        std::atomic_flag lock_flag = ATOMIC_FLAG_INIT;
 
     public:
-        constexpr spinlock (void) noexcept
-            /* guaranteed initialization to false */
-            : lock_flag {ATOMIC_FLAG_INIT}
-        {}
-
-        ~spinlock (void) noexcept = default;
+        constexpr spinlock (void) noexcept = default;
+        ~spinlock (void) noexcept          = default;
 
         spinlock (spinlock &&)      = delete;
         spinlock (spinlock const &) = delete;
