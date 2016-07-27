@@ -4,6 +4,10 @@
 //
 // spinlock; a user-space spinlock implementation for C++11 or later.
 //
+// A description of a spinlock can be found here:
+//
+//      https://en.wikipedia.org/wiki/Circular_buffer
+//
 // author: Dalton Woodard
 // contact: daltonmwoodard@gmail.com
 // repository: https://github.com/daltonwoodard/spinlock.hpp
@@ -56,6 +60,10 @@ namespace dsa
      *
      *  - A call to try_lock either successfully claims ownership of the
      *  spinlock and returns a true value or immediately returns a false value.
+     *
+     * A description of a spinlock can be found here:
+     *
+     *      https://en.wikipedia.org/wiki/Circular_buffer
      *
      * A dsa::spinlock<> is compatible with std::unique_lock<> and
      * std::lock_guard<> objects.
