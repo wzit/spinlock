@@ -143,7 +143,6 @@ namespace dsa
                     auto const now {std::chrono::steady_clock::now ()};
                     auto const elapsed {
                         std::chrono::duration_cast <duration_type> (now - start)
-                            .count ()
                     };
 
                     if (elapsed >= wait_time) {
