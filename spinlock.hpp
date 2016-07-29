@@ -6,7 +6,7 @@
 //
 // A description of a spinlock can be found here:
 //
-//      https://en.wikipedia.org/wiki/Circular_buffer
+//      https://en.wikipedia.org/wiki/Spinlock
 //
 // author: Dalton Woodard
 // contact: daltonmwoodard@gmail.com
@@ -63,7 +63,7 @@ namespace dsa
      *
      * A description of a spinlock can be found here:
      *
-     *      https://en.wikipedia.org/wiki/Circular_buffer
+     *      https://en.wikipedia.org/wiki/Spinlock
      *
      * A dsa::spinlock<> is compatible with std::unique_lock<> and
      * std::lock_guard<> objects.
